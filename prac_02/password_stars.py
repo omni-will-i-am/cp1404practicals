@@ -1,4 +1,8 @@
+"""Practical 02"""
 MIN_PW_LENGTH = 5
+
+def main():
+    """Password Check with Functions"""
 
 def get_password(min_len: int) -> str:
     while True:
@@ -7,9 +11,8 @@ def get_password(min_len: int) -> str:
             return password
         print(f"Too few characters. Try again.")
 
-def main():
-    password = get_password(MIN_PW_LENGTH)
-    print ('*' * len(password))
+password = get_password(MIN_PW_LENGTH)
+print ('*' * len(password))
 
 if __name__ == '__main__':
     main()
