@@ -11,8 +11,10 @@ Program main menu from scratch:
 
 def main():
     score = None
-    print("Menu: ")
+    menu = "G) Get valid score\nP) Print result\nS) Show stars\nQ) Quit"
+    print(menu)
     choice = input(">>> ").upper()
+
     while choice != "Q":
         if choice == "G":
             score = get_valid_score()
@@ -30,7 +32,7 @@ def main():
         else:
             print("Invalid choice")
 
-        print("Menu: ")
+        print(menu)
         choice = input(">>> ").upper()
 
     print("See you later!")
