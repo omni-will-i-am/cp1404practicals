@@ -1,18 +1,19 @@
-"""Practical 02"""
+"""
+CP1404/CP5632 - Practical
+Program for password star conversion
+"""
 MIN_PW_LENGTH = 5
 
-def main():
-    """Password Check with Functions"""
-
-def get_password(min_len: int) -> str:
+def get_password(min_len: int):
     while True:
         password = input(f"Password (minimum of {min_len} characters): ")
         if len(password) >= min_len:
             return password
         print(f"Too few characters. Try again.")
 
-password = get_password(MIN_PW_LENGTH)
-print ('*' * len(password))
+def main():
+    password = get_password(MIN_PW_LENGTH)
+    print ('*' * len(password))
 
 if __name__ == '__main__':
     main()
