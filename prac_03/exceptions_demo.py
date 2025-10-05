@@ -24,4 +24,4 @@ print("Finished.")
 # 2. When will a ZeroDivisionError occur?
 # When the user enters 0 for the denominator
 # 3. Could you change the code to avoid the possibility of a ZeroDivisionError?
-# Wrapped in a loop and retry on exceptions; break if correct values are entered.
+# Wrapped in a loop and retry on exceptions; break loop if correct values are entered.
