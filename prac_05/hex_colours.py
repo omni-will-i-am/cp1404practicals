@@ -9,3 +9,16 @@ Entering an invalid colour name should not crash the program.
 Allow the user to enter names until they enter a blank one to stop the loop.
 
 """
+
+COLOUR_CODES = {
+    "Aqua": "#00ffff",
+    "Baby Blue": "#89cff0",
+    "Baby Pink": "#f4c2c2",
+    "Cadmium Red": "#e30022",
+    "Celeste": "#b2ffff",
+    "Electric Purple": "#bf00ff",
+    "Frostbite": "#e936a7",
+    "Golden Yellow": "#ffdf00",
+    "Green Lizard": "#a7f432",
+    "Laser Lemon": "#ffff66",
+}
