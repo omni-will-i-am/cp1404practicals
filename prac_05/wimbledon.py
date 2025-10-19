@@ -12,6 +12,7 @@ Actual: 51 minutes
 
 import csv
 
+
 def load_wimbledon_data(filename):
     rows: list[list[str]] = []
     with open(filename, "r", encoding="utf-8-sig") as in_file:
@@ -22,13 +23,14 @@ def load_wimbledon_data(filename):
                 rows.append(row)
     return rows
 
+
 def count_champion_victories(rows):
     champion_to_wins: dict[str, int] = {}
     for row in rows:
-        country = row[1].strip()
         champion = row[2].strip()
         champion_to_wins[champion] = champion_to_wins.get(champion, 0) + 1
     return champion_to_wins
+
 
 def count_countries(rows):
     countries: set[str] = set()
@@ -36,6 +38,7 @@ def count_countries(rows):
         country = row[1].strip()
         countries.add(country)
     return countries
+
 
 def main():
     filename = "wimbledon.csv"
@@ -50,6 +53,7 @@ def main():
     sorted_countries = sorted(countries)
     print(f"\nThese {len(sorted_countries)} countries have won Wimbledon:")
     print(", ".join(sorted_countries))
+
 
 if __name__ == "__main__":
     main()

@@ -23,5 +23,6 @@ def main():
     for word in sorted(word_to_count):
         print(f"{word:{longest_word}} : {word_to_count[word]}")
 
+
 if __name__ == "__main__":
     main()
