@@ -7,7 +7,7 @@ This program will read a file, process the data and display the following proces
     the countries of the champions in alphabetical order
 
 Estimate: 40 minutes
-Actual: n minutes
+Actual: 51 minutes
 """
 
 import csv
