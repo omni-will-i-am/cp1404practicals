@@ -11,14 +11,31 @@ Allow the user to enter names until they enter a blank one to stop the loop.
 """
 
 COLOUR_CODES = {
-    "Aqua": "#00ffff",
-    "Baby Blue": "#89cff0",
-    "Baby Pink": "#f4c2c2",
-    "Cadmium Red": "#e30022",
-    "Celeste": "#b2ffff",
-    "Electric Purple": "#bf00ff",
-    "Frostbite": "#e936a7",
-    "Golden Yellow": "#ffdf00",
-    "Green Lizard": "#a7f432",
-    "Laser Lemon": "#ffff66",
+    "aqua": "#00ffff",
+    "baby blue": "#89cff0",
+    "baby pink": "#f4c2c2",
+    "cadmium red": "#e30022",
+    "celeste": "#b2ffff",
+    "electric purple": "#bf00ff",
+    "frostbite": "#e936a7",
+    "golden yellow": "#ffdf00",
+    "green lizard": "#a7f432",
+    "laser lemon": "#ffff66",
 }
+
+
+def main():
+    colour_name = input("Enter colour name (blank to quit): ").strip()
+    while colour_name != "":
+        key = colour_name.strip().lower()
+        try:
+            colour_code = COLOUR_CODES[key]
+            print(f"{colour_name.title()} is {colour_code}")
+        except KeyError:
+            print("Invalid colour name")
+        colour_name = input("Enter colour name (blank to quit): ").strip()
+    print("Farewell!")
+
+
+if __name__ == "__main__":
+    main()
