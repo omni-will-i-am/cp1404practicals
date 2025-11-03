@@ -13,6 +13,21 @@ Actual: 51 minutes
 import csv
 
 
+def main():
+    filename = "wimbledon.csv"
+    rows = load_wimbledon_data(filename)
+    champion_to_wins = count_champion_victories(rows)
+    countries = get_champion_country(rows)
+
+    print("Wimbledon Champions: ")
+    for champion in sorted(champion_to_wins):
+        print(f"{champion}: {champion_to_wins[champion]}")
+
+    sorted_countries = sorted(countries)
+    print(f"\nThese {len(sorted_countries)} countries have won Wimbledon:")
+    print(", ".join(sorted_countries))
+
+
 def load_wimbledon_data(filename):
     rows: list[list[str]] = []
     with open(filename, "r", encoding="utf-8-sig") as in_file:
@@ -32,27 +47,12 @@ def count_champion_victories(rows):
     return champion_to_wins
 
 
-def count_countries(rows):
+def get_champion_country(rows):
     countries: set[str] = set()
     for row in rows:
         country = row[1].strip()
         countries.add(country)
     return countries
-
-
-def main():
-    filename = "wimbledon.csv"
-    rows = load_wimbledon_data(filename)
-    champion_to_wins = count_champion_victories(rows)
-    countries = count_countries(rows)
-
-    print("Wimbledon Champions: ")
-    for champion in sorted(champion_to_wins):
-        print(f"{champion}: {champion_to_wins[champion]}")
-
-    sorted_countries = sorted(countries)
-    print(f"\nThese {len(sorted_countries)} countries have won Wimbledon:")
-    print(", ".join(sorted_countries))
 
 
 if __name__ == "__main__":

@@ -9,16 +9,6 @@ Actual: 41 minutes
 """
 
 
-def extract_name_from_email(email: str):
-    local_part = email.split("@", 1)[0]
-    pieces = local_part.replace(".", " ").replace("_", " ").replace("-", " ").split()
-    if pieces:
-        guess = " ".join(pieces).title()
-        return guess
-    else:
-        return ""
-
-
 def main():
     email_to_name = {}
 
@@ -37,6 +27,15 @@ def main():
 
     for email, name in email_to_name.items():
         print(f"{name} ({email})")
+
+def extract_name_from_email(email: str):
+    local_part = email.split("@", 1)[0]
+    pieces = local_part.replace(".", " ").replace("_", " ").replace("-", " ").split()
+    if pieces:
+        guess = " ".join(pieces).title()
+        return guess
+    else:
+        return ""
 
 
 if __name__ == '__main__':
