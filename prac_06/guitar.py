@@ -24,11 +24,11 @@ class Guitar:
 
     def get_age(self):
         """Get the age of the guitar instance"""
-        return f"In 2025 the {self.name} is {2025 - self.year} years old."
+        return f"In 2025 the {self.name} is {2025 - self.year} years old." # should only return the age, not a string
 
     def is_vintage(self):
         """Return True if the guitar instance is >=50 years old."""
         if (2025 - self.year) >= 50:
-            return f"(Vintage)"
+            return f"(Vintage)" # should return a boolean, not a string
         else:
             return f""
