@@ -1,4 +1,6 @@
-
+"""
+CP1404/CP5632 Practical - Project management exercise. Project class.
+"""
 
 class Project:
     """Represent a project object with name, start date, priority, cost estimate, and completion percentage."""
@@ -22,4 +24,5 @@ class Project:
         return self.priority < other.priority
 
     def is_complete(self):
+        """Returns true if the project is complete."""
         return self.completion_percentage >= 100

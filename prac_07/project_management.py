@@ -1,4 +1,7 @@
-
+"""
+CP1404/CP5632 Practical 07
+This program will load and save a data file and use a list of Project objects in a variety of different functions.
+"""
 
 import datetime
 from prac_07.project import Project
