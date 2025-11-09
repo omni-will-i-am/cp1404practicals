@@ -19,9 +19,9 @@ class ProgrammingLanguage:
         """Return string representation of a ProgrammingLanguage."""
         return f"{self.name}, {self.typing} Typing, Reflection={self.reflection}, Pointer Arithmetic={self.pointer_arithmetic}, First appeared in {self.year}"
 
-    # def __str__(self):
-    #     """Return a user-friendly string representation of a ProgrammingLanguage."""
-    #     return f"{self.name} ({self.year})"
+    def __str__(self):
+        """Return a user-friendly string representation of a ProgrammingLanguage."""
+        return f"{self.name} ({self.year})"
 
     def is_dynamic(self):
         """Determine if language is dynamically typed."""
