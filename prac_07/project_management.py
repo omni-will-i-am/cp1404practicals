@@ -27,8 +27,9 @@ def main():
         projects = []
         print("No default file found; starting empty.")
 
-    while True:
+    while True: # Stop doing this
         choice = input(MENU).strip().lower()
+        # while choice != "q":
         if choice == "l":
             filename = input("Filename to load: ").strip()
             try:
