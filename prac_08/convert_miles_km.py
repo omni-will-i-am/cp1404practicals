@@ -1,7 +1,5 @@
 """CP1404 Practical 08. Miles to Kilometers conversion program with Kivy GUI."""
 
-
-
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.properties import StringProperty
@@ -11,7 +9,7 @@ MILES_TO_KM = 1.60934
 
 class MilesToKmApp(App):
     """Convert miles to kilometres."""
-    output_km = StringProperty("0.0")   # this is bound to the Label's text
+    output_km = StringProperty("0.0")  # this is bound to the Label's text
 
     def build(self):
         self.title = "Convert Miles to Kilometres"
